@@ -1,0 +1,461 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Pembroke Falls | Launch</title>
+<link rel="stylesheet" href="launchstyle.css" />
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<link type="text/css" rel="stylesheet" href="js/jquery.qtip.min.css" />
+<script type="text/javascript" src="js/jquery.qtip.min.js"></script>
+
+<script type="text/javascript">
+	function preload(arrayOfImages) {
+		$(arrayOfImages).each(function(){
+			$('<img/>')[0].src = this;
+		});
+	}	
+	preload([
+		'images/CommunityMap_Large.jpg'
+	]);
+
+	$(document).ready(function(){
+		$(".overlay").fadeOut(0);
+
+		$(".tropic-isle").click(function(){
+			$(".community").fadeOut(600);
+			$(".overlay h1").text("Tropic Isle");
+			$(".communitymap").delay(600).animate(
+				{
+					backgroundSize:"350%",
+					backgroundPositionX:"0%",
+					backgroundPositionY:"0%"
+				}, 1500
+			);
+		$(".overlay").delay(1500).fadeIn(1000);
+		});
+
+		$(".palm-cove").click(function(){
+			$(".community").fadeOut(600);
+			$(".overlay h1").text("Palm Cove");
+			$(".communitymap").delay(600).animate(
+				{
+					backgroundSize:"350%",
+					backgroundPositionX:"14%",
+					backgroundPositionY:"2%"
+				}, 1500
+			);
+		$(".overlay").delay(1500).fadeIn(1000);
+		});
+
+		$(".tropic-isle-2").click(function(){
+			$(".community").fadeOut(600);
+			$(".overlay h1").text("Tropic Isle");
+			$(".communitymap").delay(600).animate(
+				{
+					backgroundSize:"350%",
+					backgroundPositionX:"38%",
+					backgroundPositionY:"-3%"
+				}, 1500
+			);
+		$(".overlay").delay(1500).fadeIn(1000);
+		});
+
+		$(".majestic-bay").click(function(){
+			$(".community").fadeOut(600);
+			$(".overlay h1").text("Majestic Bay");
+			$(".communitymap").delay(600).animate(
+				{
+					backgroundSize:"350%",
+					backgroundPositionX:"95%",
+					backgroundPositionY:"0%"
+				}, 1500
+			);
+		$(".overlay").delay(1500).fadeIn(1000);
+		});
+
+		$(".bimini-bay").click(function(){
+			$(".community").fadeOut(600);
+			$(".overlay h1").text("Bimini Bay");
+			$(".communitymap").delay(600).animate(
+				{
+					backgroundSize:"350%",
+					backgroundPositionX:"0%",
+					backgroundPositionY:"25%"
+				}, 1500
+			);
+		$(".overlay").delay(1500).fadeIn(1000);
+		});
+
+		$(".serenity-bay").click(function(){
+			$(".community").fadeOut(600);
+			$(".overlay h1").text("Serenity Bay");
+			$(".communitymap").delay(600).animate(
+				{
+					backgroundSize:"350%",
+					backgroundPositionX:"16%",
+					backgroundPositionY:"28%"
+				}, 1500
+			);
+		$(".overlay").delay(1500).fadeIn(1000);
+		});
+
+		$(".crystal-harbour").click(function(){
+			$(".community").fadeOut(600);
+			$(".overlay h1").text("Crystal Harbour");
+			$(".communitymap").delay(600).animate(
+				{
+					backgroundSize:"350%",
+					backgroundPositionX:"40%",
+					backgroundPositionY:"26%"
+				}, 1500
+			);
+		$(".overlay").delay(1500).fadeIn(1000);
+		});
+
+		$(".cascades-classics").click(function(){
+			$(".community").fadeOut(600);
+			$(".overlay h1").text("Cascades Classics");
+			$(".communitymap").delay(600).animate(
+				{
+					backgroundSize:"350%",
+					backgroundPositionX:"73%",
+					backgroundPositionY:"10%"
+				}, 1500
+			);
+		$(".overlay").delay(1500).fadeIn(1000);
+		});
+
+		$(".cascade-executives").click(function(){
+			$(".community").fadeOut(600);
+			$(".overlay h1").text("Cascade Executives");
+			$(".communitymap").delay(600).animate(
+				{
+					backgroundSize:"350%",
+					backgroundPositionX:"95%",
+					backgroundPositionY:"24%"
+				}, 1500
+			);
+		$(".overlay").delay(1500).fadeIn(1000);
+		});
+
+		$(".harbor-island").click(function(){
+			$(".community").fadeOut(600);
+			$(".overlay h1").text("Harbor Island");
+			$(".communitymap").delay(600).animate(
+				{
+					backgroundSize:"350%",
+					backgroundPositionX:"0%",
+					backgroundPositionY:"57%"
+				}, 1500
+			);
+		$(".overlay").delay(1500).fadeIn(1000);
+		});
+
+		$(".island-shores").click(function(){
+			$(".community").fadeOut(600);
+			$(".overlay h1").text("Island Shores");
+			$(".communitymap").delay(600).animate(
+				{
+					backgroundSize:"350%",
+					backgroundPositionX:"23%",
+					backgroundPositionY:"60%"
+				}, 1500
+			);
+		$(".overlay").delay(1500).fadeIn(1000);
+		});
+
+		$(".coral-bay").click(function(){
+			$(".community").fadeOut(600);
+			$(".overlay h1").text("Coral Bay");
+			$(".communitymap").delay(600).animate(
+				{
+					backgroundSize:"350%",
+					backgroundPositionX:"46%",
+					backgroundPositionY:"53%"
+				}, 1500
+			);
+		$(".overlay").delay(1500).fadeIn(1000);
+		});
+
+		$(".curbside").click(function(){
+			$(".community").fadeOut(600);
+			$(".overlay h1").text("Curbside");
+			$(".communitymap").delay(600).animate(
+				{
+					backgroundSize:"350%",
+					backgroundPositionX:"72%",
+					backgroundPositionY:"51%"
+				}, 1500
+			);
+		$(".overlay").delay(1500).fadeIn(1000);
+		});
+
+		$(".bonita-bay").click(function(){
+			$(".community").fadeOut(600);
+			$(".overlay h1").text("Bonita Bay");
+			$(".communitymap").delay(600).animate(
+				{
+					backgroundSize:"350%",
+					backgroundPositionX:"25%",
+					backgroundPositionY:"84%"
+				}, 1500
+			);
+		$(".overlay").delay(1500).fadeIn(1000);
+		});
+
+		$(".the-sanctuary").click(function(){
+			$(".community").fadeOut(600);
+			$(".overlay h1").text("The Sanctuary");
+			$(".communitymap").delay(600).animate(
+				{
+					backgroundSize:"350%",
+					backgroundPositionX:"49%",
+					backgroundPositionY:"72%"
+				}, 1500
+			);
+		$(".overlay").delay(1500).fadeIn(1000);
+		});
+
+		$(".laguna-point").click(function(){
+			$(".community").fadeOut(600);
+			$(".overlay h1").text("Laguna Point");
+			$(".communitymap").delay(600).animate(
+				{
+					backgroundSize:"350%",
+					backgroundPositionX:"75%",
+					backgroundPositionY:"82%"
+				}, 1500
+			);
+		$(".overlay").delay(1500).fadeIn(1000);
+		});
+
+		$(".pelican-trace").click(function(){
+			$(".community").fadeOut(600);
+			$(".overlay h1").text("Pelican Trace");
+			$(".communitymap").delay(600).animate(
+				{
+					backgroundSize:"350%",
+					backgroundPositionX:"17%",
+					backgroundPositionY:"98%"
+				}, 1500
+			);
+		$(".overlay").delay(1500).fadeIn(1000);
+		});
+
+		$(".heron-bay").click(function(){
+			$(".community").fadeOut(600);
+			$(".overlay h1").text("Heron Bay");
+			$(".communitymap").delay(600).animate(
+				{
+					backgroundSize:"350%",
+					backgroundPositionX:"43%",
+					backgroundPositionY:"98%"
+				}, 1500
+			);
+		$(".overlay").delay(1500).fadeIn(1000);
+		});
+
+		$(".heritage").click(function(){
+			$(".community").fadeOut(600);
+			$(".overlay h1").text("Heritage");
+			$(".communitymap").delay(600).animate(
+				{
+					backgroundSize:"350%",
+					backgroundPositionX:"76%",
+					backgroundPositionY:"92%"
+				}, 1500
+			);
+		$(".overlay").delay(1500).fadeIn(1000);
+		});
+
+
+
+
+		$(".communityclose").click(function(){
+			$(".overlay").fadeOut(1000);
+			$(".communitymap").animate(
+				{
+					backgroundSize:"100%",
+					backgroundPositionX:"0%",
+					backgroundPositionY:"0%"
+				}, 1500
+			);
+			$(".community").delay(1500).fadeIn(600);
+		});
+	});
+
+</script>
+
+<!--<style>
+	#qtip-6 .qtip-titlebar {background-color:#D9D6D6 !important; color:black;}
+</style>-->
+
+</head>
+
+<body>
+
+<div class="wrapper">
+    <img src="images/fision_logo.png" style="float:left;" />
+    <h1 class="title l opensans red">Pembroke Falls</h1>
+    <br class="clear" />
+    
+    <div class="main-nav">
+    	<a class="navLink " href="events.html">Events</a>
+    	<a class="navLink" href="news.html">News</a>
+    	<a class="navLink" href="resources.html">Resources</a>
+    	<a class="navLink" href="faq.html">FAQ's</a>
+    	<a class="navLinkSelected" href="community.html">Community Map</a>
+    	<a class="navLink" href="contact.html">Contact Us</a>
+    </div>
+    <br class="clear" />
+    
+    <div class="whiteBox">
+        <h1 class="txt_c opensansthin red nomargin">Community Map</h1>
+        <br class="clear" />
+        <div class="legend">
+            <img src="images/Construction.png" class="l MarginL20"  />
+            <p class="l MarginL opensans Labels_Legend">Construction</p>
+            <img src="images/Installation.png" class="l MarginL20"  />
+            <p class="l MarginL opensans Labels_Legend">Installation</p>
+            <img src="images/Event.png" class="l MarginL20"  />
+            <p class="l MarginL opensans Labels_Legend">Events</p>
+            <img src="images/Surveys.png" class="l MarginL20"  />
+            <p class="l MarginL opensans Labels_Legend">Surveys</p>
+            <br class="clear" />
+        </div>
+        <br class="clear" />
+	
+        <div class="communitymap">
+        
+        	<div class="tropic-isle community">
+            	<p class="opensansbold Labels_Medium nomargin">Tropic Isle</p>
+                <img src="images/Construction.png" width="25" />
+            </div>
+        	<div class="palm-cove community">
+            	<p class="opensansbold Labels_Medium nomargin">Palm Cove</p>
+                <img src="images/Installation.png" width="25" />
+            </div>
+        	<div class="tropic-isle-2 community">
+            	<p class="opensansbold Labels_Medium nomargin">Tropic Isle</p>
+                <img src="images/Construction.png" width="25" />
+                <img src="images/Surveys.png" width="25" />
+            </div>
+        	<div class="majestic-bay community">
+            	<p class="opensansbold Labels_Medium nomargin">Majestic Bay</p>
+                <img src="images/Construction.png" width="25" />
+            </div>
+        	<div class="bimini-bay community">
+            	<p class="opensansbold Labels_Medium nomargin">Bimini Bay</p>
+                <img src="images/Installation.png" width="25" />
+                <img src="images/Event.png" width="25" />
+            </div>
+        	<div class="serenity-bay community">
+            	<p class="opensansbold Labels_Medium nomargin">Serenity Bay</p>
+                <img src="images/Event.png" width="25" />
+            </div>
+        	<div class="crystal-harbour community">
+            	<p class="opensansbold Labels_Medium nomargin">Crystal Harbour</p>
+                <img src="images/Construction.png" width="25" />
+            </div>
+        	<div class="cascades-classics community">
+            	<p class="opensansbold Labels_Medium nomargin">Cascades Classics</p>
+            </div>
+        	<div class="cascade-executives community">
+            	<p class="opensansbold Labels_Medium nomargin">Cascade Executives</p>
+                <img src="images/Event.png" width="25" />
+            </div>
+        	<div class="harbor-island community">
+            	<p class="opensansbold Labels_Medium nomargin">Harbor Island</p>
+                <img src="images/Installation.png" width="25" />
+            </div>
+        	<div class="island-shores community">
+            	<p class="opensansbold Labels_Medium nomargin">Island Shores</p>
+                <img src="images/Installation.png" width="25" />
+            </div>
+        	<div class="coral-bay community">
+            	<p class="opensansbold Labels_Medium nomargin">Coral Bay</p>
+                <img src="images/Construction.png" width="25" />
+            </div>
+        	<div class="curbside community">
+            	<p class="opensansbold Labels_Medium nomargin">Curbside</p>
+                <img src="images/Installation.png" width="25" />
+            </div>
+        	<div class="bonita-bay community">
+            	<p class="opensansbold Labels_Medium nomargin">Bonita Bay</p>
+                <img src="images/Construction.png" width="25" />
+                <img src="images/Event.png" width="25" />
+            </div>
+        	<div class="the-sanctuary community">
+            	<p class="opensansbold Labels_Medium nomargin">The Sanctuary</p>
+                <img src="images/Installation.png" width="25" />
+            </div>
+        	<div class="laguna-point community">
+            	<p class="opensansbold Labels_Medium nomargin">Laguna Point</p>
+                <img src="images/Surveys.png" width="25" />
+            </div>
+        	<div class="pelican-trace community">
+            	<p class="opensansbold Labels_Medium nomargin">Pelican Trace</p>
+                <img src="images/Construction.png" width="25" />
+                <img src="images/Surveys.png" width="25" />
+                <img src="images/Event.png" width="25" />
+            </div>
+        	<div class="heron-bay community">
+            	<p class="opensansbold Labels_Medium nomargin">Heron Bay</p>
+                <img src="images/Event.png" width="25" />
+            </div>
+        	<div class="heritage community">
+            	<p class="opensansbold Labels_Medium nomargin">Heritage</p>
+                <img src="images/Construction.png" width="25" />
+                <img src="images/Surveys.png" width="25" />
+            </div>
+        
+        
+        	<div class="overlay">
+                <img src="images/CommunityClose.png" class="r communityclose" />
+            	<h1 class="opensansthin white nomargin">Pelican Trace</h1>
+                <br class="clear" />
+                <div class="l MarginR MarginL event" style="width:40px">
+                    <img class="l" style="margin-top:8px" src="images/Construction.png" />
+                </div>
+                <div class="l event">
+                    <p class="opensansbold white nomargin Labels">Construction on Bridge Street</p>
+                    <p class="opensans white Labels_Medium nomargin">7/1/2013 - 7/5/2013</p>
+                </div>
+                <br class="clear" />
+                <div class="l MarginR MarginL event" style="width:40px">
+                    <img class="l" style="margin-top:8px" src="images/Surveys.png" />
+                </div>
+                <div class="l event">
+                    <p class="opensansbold white nomargin Labels">Survey Team in Village E</p>
+                    <p class="opensans Labels_Medium white nomargin">7/1/2013 - 7/5/2013</p>
+                </div>
+                <br class="clear" />
+                <div class="l MarginR MarginL event" style="width:40px">
+                    <img class="l" style="margin-top:8px" src="images/Event.png" />
+                </div>
+                <div class="l event">
+                    <p class="opensansbold white nomargin Labels">Pool Party</p>
+                    <p class="opensans Labels_Medium white nomargin">7/13/2013 - 12pm - 4pm</p>
+                </div>
+                <br class="clear" />
+                <div class="l MarginR MarginL event" style="width:40px">
+                    <img class="l" style="margin-top:8px" src="images/Event.png" />
+                </div>
+                <div class="l event">
+                    <p class="opensansbold white nomargin Labels">Clubhouse Demonstration</p>
+                    <p class="opensans Labels_Medium white nomargin">7/23/2013 - 9am - 9pm</p>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+    <br class="clear" /><br class="clear" />
+        
+        
+</div>
+
+</body>
+</html>

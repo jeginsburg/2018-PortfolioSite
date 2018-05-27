@@ -1,0 +1,398 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Pembroke Falls | Launch</title>
+<link rel="stylesheet" href="launchstyle.css" />
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<link type="text/css" rel="stylesheet" href="js/jquery.qtip.min.css" />
+<script type="text/javascript" src="js/jquery.qtip.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".pictureBox").fadeOut(0);
+		$(".closemessage").click(function(){
+			$(".messageBox").slideUp(600);
+		});
+		$(".leftArrow").click(function(){
+			$(".event").animate(
+				{
+					opacity:0,
+					marginLeft:"-=20"
+				}, 500
+			);
+			$(".event").animate(
+				{
+					opacity:1,
+					marginLeft:"+=20"
+				}, 500
+			);
+		});
+		$(".rightArrow").click(function(){
+			$(".event").animate(
+				{
+					opacity:0,
+					marginLeft:"+=20"
+				}, 500
+			);
+			$(".event").animate(
+				{
+					opacity:1,
+					marginLeft:"-=20"
+				}, 500
+			);
+		});
+		$(".downArrow").click(function(){
+			$(".pictureBox").fadeToggle(500);
+			$(".downArrow").toggleClass("downArrowBG");
+			$("html, body").animate({scrollTop: $(document).height()}), 1000
+		});
+		$(".rightArrowSmall").click(function(){
+			$(".slideshowImage").animate({opacity:0}, 500);
+			$(".slideshowImage").animate({opacity:1}, 500);
+		});
+		$(".leftArrowSmall").click(function(){
+			$(".slideshowImage").animate({opacity:0}, 500);
+			$(".slideshowImage").animate({opacity:1}, 500);
+		});
+		//$(".timeline-agreement").tooltip(
+		//	{
+		//		position: 
+		//			{
+		//				my: "center bottom-20",
+		//				at: "center top",
+		//				using: function(position, feedback)
+		//					{
+		//						$(this).css(position);
+		//						$("<div>").addClass("arrow").addClass(feedback.vertical).addClass(feedback.horizontal).appendTo(this);
+		//					}
+		//			},
+		//		content:"<img src='images/rightArrow.jpg' style='float:left; margin:10px;' />At this stage, your community has officially signed an agreement with Hotwire Communications to be your telecommunications and entertainment provider. Inbetween now and when you officially have service a lot more things will happen though."
+		//	}
+		//);
+		$('.timeline-agreement').qtip({
+			content: {
+				text: "This is the point where Hotwire and your community have agreed to a contract for entertainment and cable services.  This is the beginning of a process that, while complex for us, will be very simple and easy for you to deal with.",
+				title: "<img src='images/HotwireLogo.png' width='20' style='float:left;' /><span style='float:left; margin-left:6px; margin-top:3px;'>Agreement Reached</span>",
+				//button: 'Close'
+			},
+			//hide: {event: false},
+			position: {
+				my: 'top left',
+				at: 'bottom center'
+			}
+		});
+		$('.timeline-hotwire').qtip({
+			content: {
+				text: "This is the stage where Hotwire's team begings its work on your property.  This will typically consist of the phases after this one, such as construction, but is also a time where Hotwire representatives will be around to answer any questions you may have about any part of the process or how the progress currently stands.",
+				title: "<img src='images/HotwireLogo.png' width='20' style='float:left;' /><span style='float:left; margin-left:6px; margin-top:3px;'>Hotwire Team On Property</span>",
+				//button: 'Close'
+			},
+			//hide: {event: false},
+			position: {
+				my: 'top left',
+				at: 'bottom center'
+			}
+		});
+		$('.timeline-construction').qtip({
+			content: {
+				text: "At this stage, our wiring crew is busy at work! They will be digging trenches in which to run fiber out to your various homes or units.  You can view the calendar below to see which streets the crew will be constructing on and for what duration.  We try to inconvenience you as little as is possible.",
+				title: "<img src='images/HotwireLogo.png' width='20' style='float:left;' /><span style='float:left; margin-left:6px; margin-top:3px;'>Construction Phase</span>",
+				//button: 'Close'
+			},
+			//hide: {event: false},
+			position: {
+				my: 'top left',
+				at: 'bottom center'
+			}
+		});
+		$('.timeline-survey').qtip({
+			content: {
+				text: "During the surveying phase, a Hotwire representative will go around to every unit and find out that unit's needs.  Typically this to determine what service level is required, such as how many cable boxes, modems, routers and any other equipment is needed as well as if any unique services are requested, like High Definition, HBO, etc.",
+				title: "<img src='images/HotwireLogo.png' width='20' style='float:left;' /><span style='float:left; margin-left:6px; margin-top:3px;'>Surveying Phase</span>",
+				//button: 'Close'
+			},
+			//hide: {event: false},
+			position: {
+				my: 'top left',
+				at: 'bottom center'
+			}
+		});
+		$('.timeline-clubhouse').qtip({
+			content: {
+				text: "Our goal during this process is to be as transparent as possible and show you what Hotwire has to offer.  To this end, we typically try to get the Clubhouse connected as quickly as possible, which then allows us to host demos of our services and offers a central point for any questions or concerns.",
+				title: "<img src='images/HotwireLogo.png' width='20' style='float:left;' /><span style='float:left; margin-left:6px; margin-top:3px;'>Clubhouse Connected</span>",
+				//button: 'Close'
+			},
+			//hide: {event: false},
+			position: {
+				my: 'top left',
+				at: 'bottom center'
+			}
+		});
+		$('.timeline-installation').qtip({
+			content: {
+				text: "Now that we have laid the fiber and determined your needs, installation can begin.  This is when an appointment will be made for a technician to come to your home and connect and install your cable and/or other services. Occasionally, there will sometimes be offers of early installation if you would like to be a 'Beta tester'.  This is someone who gets the service early, but may occasionally deal with service interruptions while the rest of the work is being completed.",
+				title: "<img src='images/HotwireLogo.png' width='20' style='float:left;' /><span style='float:left; margin-left:6px; margin-top:3px;'>Installation Phase</span>",
+				//button: 'Close'
+			},
+			//hide: {event: false},
+			position: {
+				my: 'top right',
+				at: 'bottom center'
+			}
+		});
+		$('.timeline-transitions').qtip({
+			content: {
+				text: "Now that everyone in the community has been installed, the on-site Hotwire staff will now depart the community.  Worry not though! If at any time you have service disruption, you can call our Customer Service Hotline or speak directly with your Property Manager, whose information will be on your community's property site, at the same web address as this current site.",
+				title: "<img src='images/HotwireLogo.png' width='20' style='float:left;' /><span style='float:left; margin-left:6px; margin-top:3px;'>Hotwire Transitions</span>",
+				//button: 'Close'
+			},
+			//hide: {event: false},
+			position: {
+				my: 'top right',
+				at: 'bottom center'
+			}
+		});
+				
+	});
+
+</script>
+
+<!--<style>
+	#qtip-6 .qtip-titlebar {background-color:#D9D6D6 !important; color:black;}
+</style>-->
+
+</head>
+
+<body>
+
+<div class="wrapper">
+    <img src="images/fision_logo.png" style="float:left;" />
+    <h1 class="title l opensans red">Pembroke Falls</h1>
+    <br class="clear" />
+    
+    <div class="main-nav">
+    	<a class="navLinkSelected " href="events.html">Events</a>
+    	<a class="navLink" href="news.html">News</a>
+    	<a class="navLink" href="resources.html">Resources</a>
+    	<a class="navLink" href="faq.html">FAQ's</a>
+    	<a class="navLink" href="community.html">Community Map</a>
+    	<a class="navLink" href="contact.html">Contact Us</a>
+    </div>
+    <br class="clear" />
+    
+    <div class="messageBox Pad10">
+    	<div class="r closemessage MarginL"><img src="images/CloseButton.jpg"  /></div>
+        <p class="opensans nomargin Labels">Greetings from Hotwire Communications!  We are extremely excited that your community has chosen us as your new telecommunications and entertainment service provider.  The transition to Hotwire is a pretty complex process on our end but we've got a special team of specialists dedicated to make it easy for you!  This web site has been created to communicate important informationa and ongoing updates to your community.  Our <a class="red" href="#">Events</a> calendar will show what's happening in the community, our <a class="red" href="#">News</a> and <a class="red" href="#">Resources</a> will inform and educate, our <a class="red" href="#">FAQ's</a> and <a class="red" href="#">Contact Us</a> provide the opportunity to receive additonal support.</p>
+    </div>
+    
+    <br class="clear" />
+    
+	<div title="" class="timeline-agreement">
+    	<img src="images/Agreement.png" />
+    </div>
+	<div class="timeline-bar"></div>
+	<div class="timeline-hotwire">
+    	<img src="images/HotwireProperty.png" />
+    </div>
+	<div class="timeline-bar"></div>
+	<div class="timeline-construction">
+    	<img src="images/ConstructionPhase.png" />
+    </div>
+	<div class="timeline-bar"></div>
+	<div class="timeline-survey">
+    	<img src="images/SurveyPhase.png" />
+    </div>
+	<div class="timeline-bar"></div>
+	<div class="timeline-clubhouse">
+    	<img src="images/ClubhouseConnected.png" />
+    </div>
+	<div class="timeline-bar"></div>
+	<div class="timeline-installation">
+    	<img src="images/InstallationPhase.png" />
+    </div>
+	<div class="timeline-bar disabled"></div>
+	<div class="timeline-transitions disabled">
+    	<img src="images/Transitions.png" />
+    </div>
+    <br class="clear" />
+    
+    <p class="agreement-text">Agreement Reached</p>
+    <p class="hotwire-text">Hotwire Team on Property</p>
+    <p class="construction-text">Construction Phase</p>
+    <p class="surveying-text">Surveying Phase</p>
+    <p class="clubhouse-text">Clubhouse Connected</p>
+    <p class="installation-text">Installation Phase</p>
+    <p class="transitions-text disabledtext">Hotwire Transitions</p>
+    
+    <script>
+	</script>
+    
+    <br class="clear" />
+    
+    <div class="left_column">
+    	<div class="whiteBox">
+        	<h2 class="opensansthin red nomargin">Bulletin Board</h2>
+            <br class="clear" />
+            <h5 class="opensansbold red nomargin">July 24th, 2013 - 3:35 PM</h5>
+            <p class="Labels_Medium opensans nomargin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt urna non nulla adipiscing, non adipiscing orci eleifend. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean erat dolor, rhoncus eu nisl sit amet, posuere volutpat.</p>
+            <br class="clear" />
+            <h5 class="opensansbold red nomargin">July 24th, 2013 - 3:35 PM</h5>
+            <p class="Labels_Medium opensans nomargin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt urna non nulla adipiscing, non adipiscing orci eleifend. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean erat dolor, rhoncus eu nisl sit amet, posuere volutpat.</p>
+            <br class="clear" />
+            <h5 class="opensansbold red nomargin">July 24th, 2013 - 3:35 PM</h5>
+            <p class="Labels_Medium opensans nomargin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt urna non nulla adipiscing, non adipiscing orci eleifend. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean erat dolor, rhoncus eu nisl sit amet, posuere volutpat.</p>
+            <br class="clear" /><br class="clear" />
+            <div style="margin-top:14px"></div>
+        </div>
+        <br class="clear" />
+    	<div class="whiteBox">
+            <div class="l" style="width:150px;">
+                <img class="ManagerPicture" src="images/AccountManager.jpg" />
+                <br class="clear" />
+                <p class="ManagerName opensans red">Jerry Gilston</p>
+                <p class="ManagerTitle lightgray">Account Manager</p>
+            </div>
+            <div class="l MarginL" style="width:298px;">
+                <p class="Labels_Medium opensans">Hello! My name is <strong>Jerry Gilston</strong> and I am your personal representative at <strong>Valencia Lakes</strong>. If you have any specific questions or need assistance selecting your services, please let me know.</p>
+                <input type="button" value="Contact Us" class="r redButton" />
+            </div>
+            <br class="clear" />
+        </div>
+    </div>
+    <div class="right_column">
+    	<div class="whiteBox">
+        	<img src="images/LeftArrow.jpg" class="leftArrow"  />
+        	<img src="images/RightArrow.jpg" class="rightArrow"  />
+	       	<h2 class="txt_c MarginT opensansthin red nomargin">July 2013</h2>
+            <br class="clear" />
+            <div class="legend">
+            	<img src="images/Construction.png" class="l MarginL20"  />
+                <p class="l MarginL opensans Labels_Legend">Construction</p>
+            	<img src="images/Installation.png" class="l MarginL20"  />
+                <p class="l MarginL opensans Labels_Legend">Installation</p>
+            	<img src="images/Event.png" class="l MarginL20"  />
+                <p class="l MarginL opensans Labels_Legend">Events</p>
+            	<img src="images/Surveys.png" class="l MarginL20"  />
+                <p class="l MarginL opensans Labels_Legend">Surveys</p>
+                <br class="clear" />
+            </div>
+            <a href="#" class="red opensans r MarginT">See In Community Map View</a>
+            <br class="clear" />
+            <div class="l MarginR MarginL event" style="width:40px">
+            	<img class="l" style="margin-top:8px" src="images/Construction.png" />
+            </div>
+            <div class="l event">
+            	<p class="opensansbold lightgray nomargin Labels">July 1st - July 5th</p>
+                <p class="opensans Labels_Medium nomargin">Construction crews on Happy Street</p>
+            </div>
+            <br class="clear" />
+            <div style="margin-top:5px"></div>
+            <div class="l MarginR MarginL event" style="width:40px">
+            	<img class="l" style="margin-top:8px" src="images/Event.png" />
+            </div>
+            <div class="l event">
+            	<p class="opensansbold lightgray nomargin Labels">July 2nd - 9 AM</p>
+                <p class="opensans Labels_Medium nomargin">Clubhouse Demo</p>
+            </div>
+            <br class="clear" />
+            <div style="margin-top:5px"></div>
+            <div class="l MarginR MarginL event" style="width:40px">
+            	<img class="l" style="margin-top:8px" src="images/Construction.png" />
+            </div>
+            <div class="l event">
+            	<p class="opensansbold lightgray nomargin Labels">July 8th - July 12th</p>
+                <p class="opensans Labels_Medium nomargin">Construction crews on Bridge Street</p>
+            </div>
+            <br class="clear" />
+            <div style="margin-top:5px"></div>
+            <div class="l MarginR MarginL event" style="width:40px">
+            	<img class="l" style="margin-top:8px" src="images/Surveys.png" />
+            </div>
+            <div class="l event">
+            	<p class="opensansbold lightgray nomargin Labels">July 8th - July 12th</p>
+                <p class="opensans Labels_Medium nomargin">Survey Team in Village E</p>
+            </div>
+            <br class="clear" />
+            <div style="margin-top:5px"></div>
+            <div class="l MarginR MarginL event" style="width:40px">
+            	<img class="l" style="margin-top:8px" src="images/Event.png" />
+            </div>
+            <div class="l event">
+            	<p class="opensansbold lightgray nomargin Labels">July 13th - 12 PM</p>
+                <p class="opensans Labels_Medium nomargin">Pool Party</p>
+            </div>
+            <br class="clear" />
+            <div style="margin-top:5px"></div>
+            <div class="l MarginR MarginL event" style="width:40px">
+            	<img class="l" style="margin-top:8px" src="images/Installation.png" />
+            </div>
+            <div class="l event">
+            	<p class="opensansbold lightgray nomargin Labels">July 15th - July 19th</p>
+                <p class="opensans Labels_Medium nomargin">Installation in Village A</p>
+            </div>
+            <br class="clear" />
+            <div style="margin-top:5px"></div>
+            <div class="l MarginR MarginL event" style="width:40px">
+            	<img class="l" style="margin-top:8px" src="images/Surveys.png" />
+            </div>
+            <div class="l event">
+            	<p class="opensansbold lightgray nomargin Labels">July 15th - July 20th</p>
+                <p class="opensans Labels_Medium nomargin">Survey Team in Village E</p>
+            </div>
+            <br class="clear" />
+            <div style="margin-top:5px"></div>
+            <div class="l MarginR MarginL event" style="width:40px">
+            	<img class="l" style="margin-top:8px" src="images/Installation.png" />
+            </div>
+            <div class="l event">
+            	<p class="opensansbold lightgray nomargin Labels">July 22nd - July 26th</p>
+                <p class="opensans Labels_Medium nomargin">Installation in Village A</p>
+            </div>
+            <br class="clear" />
+            <div style="margin-top:5px"></div>
+            <div class="l MarginR MarginL event" style="width:40px">
+            	<img class="l" style="margin-top:8px" src="images/Surveys.png" />
+            </div>
+            <div class="l event">
+            	<p class="opensansbold lightgray nomargin Labels">July 22nd - July 27th</p>
+                <p class="opensans Labels_Medium nomargin">Survey Team in Village E</p>
+            </div>
+            <br class="clear" />
+            <div style="margin-top:5px"></div>
+            <div class="l MarginR MarginL event" style="width:40px">
+            	<img class="l" style="margin-top:8px" src="images/Event.png" />
+            </div>
+            <div class="l event">
+            	<p class="opensansbold lightgray nomargin Labels">July 23rd - 9 AM</p>
+                <p class="opensans Labels_Medium nomargin">Clubhouse Demo</p>
+            </div>
+            <br class="clear" />
+        </div>
+    </div>
+
+    <br class="clear" />
+    
+    <h2 class="l red opensansthin">See Our Progress</h2>
+    <div class="l redline"></div>
+    <div class="r downArrow" style="margin-top:15px" ></div>
+    <br class="clear" />
+    <div class="pictureBox">
+    	<img src="images/LeftArrowSmall.jpg" class="leftArrowSmall" />
+        <img src="images/placeholder.jpg" class="slideshowImage" />
+        <img src="images/placeholder.jpg" class="slideshowImage" />
+        <img src="images/placeholder.jpg" class="slideshowImage" />
+        <img src="images/placeholder.jpg" class="slideshowImage" />
+        <img src="images/placeholder.jpg" class="slideshowImage" />
+    	<img src="images/RightArrowSmall.jpg" class="rightArrowSmall" />
+        <br class="clear" />
+    </div>
+
+    <br class="clear" /><br class="clear" />
+</div>
+
+</body>
+</html>

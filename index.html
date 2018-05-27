@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- <link rel="shortcut icon" href="favicon.ico"/> -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jeff Ginsburg | UI | Design | Development</title>
+<link rel='stylesheet' href='css/jg-styles.css' />
+<script type='text/javascript' src='js/jg-scripts.js'></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<link rel="stylesheet" type="text/css" href="fonts/fontawesome-all.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Muli:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container">
+
+		<header>
+			<div class="menu-toggle" data-js="menu-toggle">
+				<span class="menu-toggle-grippy">Toggle</span>
+				<span class="menu-toggle-label">Menu</span>
+			</div>
+		</header>
+
+		<div class="hidden-panel">
+			<span class="hidden-panel-close" data-js="hidden-panel-close">
+				<i class="fas fa-times"></i>
+			</span>
+
+			<nav class="hidden-panel-nav">
+				<div class="hidden-panel-content">
+					<h3>Menu</h3>
+					<ul>
+						<li><a href="#" title="Home">Home</a></li>
+						<li><a href="#" onclick="javascript:revealAbout(); menuToggle.click();" title="About">About</a></li>
+						<li><a href="#" onclick="javascript:populateMasonry('Web_Development'); menuToggle.click(); closeAbout();" title="Web">Web</a></li>
+						<li><a href="#" onclick="javascript:populateMasonry('User_Interface'); menuToggle.click(); closeAbout();" title="UI">User Interface</a></li>
+						<li><a href="#" onclick="javascript:populateMasonry('Mobile_Ads'); menuToggle.click(); closeAbout();" title="MobileAds">Mobile Ads</a></li>
+					</ul>
+				</div>
+			</nav>
+
+			<div class="hidden-panel-text">
+				<p>
+					Philadelphia, PA <br />
+					919.601.9888 <br />
+					jeginsburg@gmail.com <br />
+					<a href="https://github.com/jeginsburg" target="_blank">
+						<i class="fab fa-github"></i>
+					</a>
+					<a href="https://www.linkedin.com/in/jeffginsburg/" target="_blank">
+						<i class="fab fa-linkedin"></i>
+					</a>
+					<a href="mailto:jeginsburg@gmail.com" target="_blank">
+						<i class="fas fa-envelope"></i>
+					</a>
+				</p>
+			</div>
+		</div>
+		<a href="#"><div class="logo"></div></a>
+		<div class="filters">
+			<a id="all-toggle" href="#">all</a>
+			<a id="web-toggle" href="#">web development</a>
+			<a id="ui-toggle" href="#">user interface</a>
+			<a id="ads-toggle" href="#">mobile ads</a>
+		</div>
+
+		<div id="brick-layout-holder">
+			<div class="grid grid--type-a">
+				<div class="grid__sizer"></div>
+				<div id="brick-layout">
+					<div class="grid__item">
+						<a class="grid__link" href="#">
+							<img class="grid__img" src="images/ABC_thumb.jpg" alt="Some image" />
+						</a>
+					</div>
+
+					<div id="gallery-card-1" class="grid__item">
+						<img class="grid__img" src="images/ABC_thumb.jpg" alt="Some image" />
+						<div class="card-overlay">
+							<p class="card-title">Project Ipsum Name</p>
+							<div class="overlay-hover">
+								<p>card<span>category</span></p>
+								<i class="far fa-desktop"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="project-details">
+		<div id="gallery-back"><i class="fas fa-arrow-circle-left"></i> Back to Gallery</div>
+		<div id="project-left" class="project-left">
+			<div id="project-image-previous"><i class="fas fa-arrow-left"></i></div>
+			<div id="project-image-next"><i class="fas fa-arrow-right"></i></div>
+			<div id="project-image"></div>
+		</div>
+		<div id="project-right" class="project-right">
+			<p id="project-name">Project Ipsum Name</p>
+			<p id="project-category">category</p>
+			<p id="project-code">code used</p>
+			<p id="project-description">description</p>
+			<a target="_blank" id="project-link">View Project</a>
+			<a target="_blank" id="project-github"><i class="fab fa-github"></i></a>
+		</div>
+		<div id="project-previous"><i class="fas fa-chevron-double-left"></i> Previous Project</div>
+		<div id="project-next">Next Project <i class="fas fa-chevron-double-right"></i></div>
+	</div>
+
+
+	<div id="about-section">
+		<div class="blue-bar">
+			<div onclick="javascript:closeAbout();" class="close-button"><i class="fas fa-times-square"></i> Close</div>
+			<p class="bar-title">About</p>
+			<p class="bar-content">I enjoy creating designs that not only catch the eye for being visually attractive, but also surprise with their simplicity and ease of use. I see the web as an ever changing entity, and I like to use whatever technology is needed to produce better results.</p>
+		</div>
+		<div class="about-left">
+			<img src="images/about-pic.jpg" />
+			<br class="clear" />
+			<div class="skills-left">
+				<div class="skills-title"><i class="fas fa-code"></i> Skills & Expertise</div>
+				<ul>
+					<li>Adobe Creative Suite</li>
+					<li>HTML/HTML5</li>
+					<li>CSS/CSS3</li>
+					<li>Javascript</li>
+					<li>jQuery</li>
+					<li>MRAID, AdMarvel, AdMob, MoPub</li>
+					<li>Visual Studio</li>
+					<li>Wordpress, Sitefinity</li>
+					<li>Design</li>
+					<li>Typography</li>
+					<li>Microsoft Office</li>
+				</ul>
+			</div>
+			<div class="skills-right">
+				<div class="skills-title"><i class="far fa-desktop-alt"></i> Services</div>
+				<ul>
+					<li>Website Design/Development</li>
+					<li>User Interface Design/Development</li>
+					<li>Responsive Design</li>
+					<li>Branding</li>
+					<li>Social Network Integration</li>
+					<li>Web API Integration</li>
+					<li>Mobile Ad Creation</li>
+					<li>Wordpress Customization</li>
+				</ul>
+
+			</div>
+		</div>
+		<div class="about-right">
+			<input type="checkbox" />
+			<div class="company-name"><div class="expanded-icon"></div>Surgent McCoy, LLC</div>
+			<div class="company-content">
+				<p>Front-End Developer : <span>January 2017 - Present</span></p>
+				<ul>
+					<li><i class="fas fa-bullseye"></i> Responsible for creation and development of pages and modules across all Wordpress based sites, including page templates, ecommerce and customization.</li>
+					<li><i class="fas fa-bullseye"></i> Responsible for development of front-end portions of page templates for Sitefinity (.NET) based sites.</li>
+					<li><i class="fas fa-bullseye"></i> Responsibilities Include initial project discovery, master page creation, UI updates, and technical insight as projects require.</li>
+				</ul>
+			</div>
+			<input type="checkbox" />
+			<div class="company-name"><div class="expanded-icon"></div>Pointroll/Sizmek</div>
+			<div class="company-content">
+				<p>Development Team Lead, East Coast : <span>October 2013 - January 2017</span></p>
+				<ul>
+					<li><i class="fas fa-bullseye"></i> Responsible for the quality and results of a team of designers and developers creating some of the best and most innovative banner ads.</li>
+					<li><i class="fas fa-bullseye"></i> Drive clients to find the best solution for unique and challenging creatives, and develop dynamic strategies for complex rich media.</li>
+					<li><i class="fas fa-bullseye"></i> Build rich media for mobile web, desktop and in-app utilizing HTML5, CSS, and Javascript under tight deadlines.</li>
+					<li><i class="fas fa-bullseye"></i> Act as a liaison between editorial and development teams.</li>
+					<li><i class="fas fa-bullseye"></i> Collaborate with Project Managers, Traffic Managers, and Art Directors to gather campaign info to help build and scope projects.</li>
+					<li><i class="fas fa-bullseye"></i> Translate client files (HTML/PSD’s/PDF’s) to work with Pointroll/Sizmek's proprietary platform.</li>
+					<li><i class="fas fa-bullseye"></i> Ensure campaigns function properly on publisher pages across all devices and browsers.</li>
+				</ul>
+			</div>
+			<input type="checkbox" />
+			<div class="company-name"><div class="expanded-icon"></div>Miles Technologies</div>
+			<div class="company-content">
+				<p>Senior Graphical & User Interface Developer : <span>June 2010 - June 2013</span></p>
+				<ul>
+					<li><i class="fas fa-bullseye"></i> Responsible for creation of web interfaces, master pages and control skinning for custom software solutions.</li>
+					<li><i class="fas fa-bullseye"></i> Responsible for quality of user interfaces designed for all custom developed software applications as well as new and existing feature development.</li>
+					<li><i class="fas fa-bullseye"></i> Responsible for coordinating mockups for all new system designs.</li>
+					<li><i class="fas fa-bullseye"></i> Coordinate graphics integration to applications.</li>
+					<li><i class="fas fa-bullseye"></i> Analyze UI for systems during QA phase of project in order to provide recommendations on modifying the code / display in order to be more user-friendly and/or intuitive.</li>
+				</ul>
+			</div>
+			<input type="checkbox" />
+			<div class="company-name"><div class="expanded-icon"></div>Purple Lion Design</div>
+			<div class="company-content">
+				<p>Co-Founder, Web Developer : <span>September 2011 - September 2016</span></p>
+				<ul>
+					<li><i class="fas fa-bullseye"></i> Responsible for creation of all graphics and user interface related items.</li>
+					<li><i class="fas fa-bullseye"></i> Responsibilities Include initial project designs, master page creation, UI updates as well as marketing & branding decisions.</li>
+					<li><i class="fas fa-bullseye"></i> Work for custom software clients include designing, mocking up and developing screens for corporate websites, Greek Solutions products and all additional custom software solutions.</li>
+				</ul>
+			</div>
+			<input type="checkbox" />
+			<div class="company-name"><div class="expanded-icon"></div>Freelance</div>
+			<div class="company-content">
+				<p>Web/Interactive Developer : <span>May 2009 - Present</span></p>
+				<ul>
+					<li><i class="fas fa-bullseye"></i> I am taking on various projects that come my way, ranging from external websites, digital ad creation, responsive design and general web development.</li>
+				</ul>
+			</div>
+			<a class="download-link" target="_blank" href="images/JeffGinsburg_Resume_2018.pdf">Download Full Resume</a>
+		</div>
+	</div>
+
+	<div id='lastElement'></div>
+</body>
+
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/masonry.pkgd.min.js"></script>
+<script src="js/anime.min.js"></script>
+<script src="js/main.js"></script>
+
+</html>
