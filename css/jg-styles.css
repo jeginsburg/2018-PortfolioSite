@@ -417,6 +417,7 @@ p.card-title {
 	margin:8px 12px;
 	font-size:32px;
 	opacity:0;
+	cursor:pointer;
 	transition:0.3s 1.3s all ease-in-out;
 }
 #project-details.active #project-github {opacity:1;}
@@ -641,6 +642,7 @@ p.card-title {
 @media screen and (max-width:600px){
 	.skills-left {width:96%; margin-left:2%;}
 	.skills-right {width:96%; margin-left:2%;}
+	#brick-layout-holder {width:98%; margin-left:1%;}
 }
 
 

@@ -95,6 +95,7 @@ function populateMasonry(filter){
 	console.log(projectData);
 	console.log("No of projects: " + projectData.length);
 	document.getElementById('brick-layout').innerHTML = "";
+	var cardCount = 0;
 	for(var i = 0; i < projectData.length; i++){
 		var catOne = projectData[i].category.split('_')[0];
 		var catTwo = projectData[i].category.split('_')[1];
@@ -124,6 +125,7 @@ function populateMasonry(filter){
 				galleryCard.style.opacity = '1';
 			}, (i * 150))
 		}else if(filter == projectData[i].category){
+			cardCount++;
 			// console.log('Project #' + (i + 1) + " - " + projectData[i].category);
 			let galleryCard = document.createElement('div');
 			galleryCard.id = 'gallery-card-' + (i + 1);
@@ -142,7 +144,7 @@ function populateMasonry(filter){
 			document.getElementById('brick-layout').append(galleryCard);
 			window.setTimeout(function(){
 				galleryCard.style.opacity = '1';
-			}, (i * 150))
+			}, (cardCount * 150))
 		}
 	}
 	init();
