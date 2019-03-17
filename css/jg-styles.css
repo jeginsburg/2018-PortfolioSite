@@ -27,8 +27,8 @@ body {overflow-x: hidden;}
 .filters {
 	display:flex;
 	justify-content: space-around;
-	width:40%;
-	margin:50px 30%;
+	width:44%;
+	margin:50px 28%;
 	padding:2px 10px;
 	border-radius:25px;
 	border:1px solid #02a6f3;
